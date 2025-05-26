@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preserve a Natureza</title>
+    <!-- Importa o arquivo CSS do Bootstrap versão 4.5.2 para aplicar estilos prontos de layout, botões, carrossel, etc. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!--Conectando o css do projeto-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Importa a biblioteca jQuery (versão leve/slim), necessária para o funcionamento de componentes interativos do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Importa o Popper.js, uma biblioteca que ajuda no posicionamento correto de elementos como menus dropdown e tooltips no Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Importa o JavaScript do Bootstrap versão 4.5.2, que ativa os componentes interativos como carrossel, modal, botão colapsável etc. -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+    <h1>Preservar é Viver: Cuidando da Beleza da Natureza</h1>
+    <p>A natureza é fonte de vida, beleza e equilíbrio. Preservá-la é cuidar do nosso próprio futuro, protegendo as cores, os sons e a harmonia que ela nos oferece. Cada gesto conta. Seja a mudança que o planeta precisa.</p>
+
+    <!--Carrossel 1 Passagem Automática-->
+    <!--DIV abaixo contém TODO o conteúdo do carrossel
+       Atributo slide: habilita o efeito de transição entre as imagens
+       Atributo data-ride: carousel: Avisa a pág. web que assim que for aberta deve iniciar a animação do slide 
+       Atributo data-interval="3000": Tempo de intervalo entre os slides em milissegundos
+    -->
+    <center>
+    <div id="carrossel1-Slides" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <!--Conter todos os slides, e o que  determina isso é o atributo carousel-inner-->
+        <div class="carousel-inner">
+            <!--As div's que de fato contém as imagens, atributo active determina qual será a imagem que será exibida primeiro-->
+            <div class="carousel-item active">
+                <img class="d-block w-100" style="height:600px;" src="bela-paisagem-de-um-rio-cercado-por-muito-verde-em-uma-floresta.jpg" alt="">
+            </div>
+            <!--Atributo carousel-item define cada slides individualmente-->
+            <div class="carousel-item">
+                <img class="d-block w-100" style="height:600px;" src="cachoeira-cascada-de-texolo-em-xico-mexico.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" style="height:600px;" src="vista-de-tigre-selvagem-na-natureza.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" style="height:600px;" src="iguana-de-perto-na-natureza.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!--Dar o espaço de uma linha-->
+    <br>
+    <!--Adicionar uma linha de separação-->
+    <hr>
+    <!--Carrossel 2 com botões de controle-->
+    <div id="carrossel2-Slides" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <!--Conter todos os slides, e o que  determina isso é o atributo carousel-inner-->
+        <div class="carousel-inner">
+            <!--As div's que de fato contém as imagens, atributo active determina qual será a imagem que será exibida primeiro-->
+            <div class="carousel-item active">
+                <img class="d-block w-100" style="height:500px;" src="bela-paisagem-de-um-rio-cercado-por-muito-verde-em-uma-floresta.jpg" alt="">
+            </div>
+            <!--Atributo carousel-item define cada slides individualmente-->
+            <div class="carousel-item">
+                <img class="d-block w-100" style="height:500px;" src="floresta1.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" style="height:500px;" src="vista-de-tigre-selvagem-na-natureza.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" style="height:500px;" src="iguana-de-perto-na-natureza.jpg" alt="">
+            </div>
+        </div>
+        <!--Botões Next e Prev-->
+        <!--Botão Anterior (prev)-->
+        <!--Atributo class="carousel-control-prev": Define posição e estilo do botão (seta) à esquerda 
+            Atributo href= será o id do carrossel que ele irá controlar
+            role=button : informa o programa de leitura de tela (deficientes visuais) que o elemento funciona como um botão
+            aria-hidden='true' : esconde o ícone do botão caso seja identificado que o usuário está utilizando um programa de leitor de tela
+            class="sr-only" : habilita o aparecimento do texto quando leitor de tela está sendo utilizado
+            data-slide="prev" : Determina que deve voltar o slide
+            carousel-control-prev-icon: ícone de seta para a esquerda
+        -->
+        <a class="carousel-control-prev" href="#carrossel2-Slides" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <!-- Botão Próximo -->
+        <!-- Ícone de seta da direita -->
+        <a class="carousel-control-next" href="#carrossel2-Slides" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+    <br>
+    <hr>
+    <!--Carrossel 3 com quantidade de itens -->
+    <div id="carrossel3-Slides" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <ol class="carousel-indicators">
+            <li data-target="carrossel3-Slides" data-slide-to="0" class="active"></li>
+            <li data-target="carrossel3-Slides" data-slide-to="1"></li>
+            <li data-target="carrossel3-Slides" data-slide-to="2"></li>
+            <li data-target="carrossel3-Slides" data-slide-to="3"></li>
+        </ol>
+        <!--Conter todos os slides, e o que  determina isso é o atributo carousel-inner-->
+        <div class="carousel-inner">
+            <!--As div's que de fato contém as imagens, atributo active determina qual será a imagem que será exibida primeiro-->
+            <div class="carousel-item active">
+                <img class="d-block w-100" style="height:500px;" src="bela-paisagem-de-um-rio-cercado-por-muito-verde-em-uma-floresta.jpg" alt="">
+            </div>
+            <!--Atributo carousel-item define cada slides individualmente-->
+            <div class="carousel-item">
+                <img class="d-block w-100" style="height:500px;" src="cachoeira-cascada-de-texolo-em-xico-mexico.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" style="height:500px;" src="vista-de-tigre-selvagem-na-natureza.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" style="height:500px;" src="iguana-de-perto-na-natureza.jpg" alt="">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carrossel3-Slides" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <!-- Botão Próximo -->
+        <!-- Ícone de seta da direita -->
+        <a class="carousel-control-next" href="#carrossel3-Slides" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+    <br>
+    <hr>
+    <!--Carrossel 4 com descrição-->
+    <div id="carrossel4-Slides" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <ol class="carousel-indicators">
+            <li data-target="carrossel4-Slides" data-slide-to="0" class="active"></li>
+            <li data-target="carrossel4-Slides" data-slide-to="1"></li>
+            <li data-target="carrossel4-Slides" data-slide-to="2"></li>
+            <li data-target="carrossel4-Slides" data-slide-to="3"></li>
+        </ol>
+        <!--Conter todos os slides, e o que  determina isso é o atributo carousel-inner-->
+        <div class="carousel-inner">
+            <!--As div's que de fato contém as imagens, atributo active determina qual será a imagem que será exibida primeiro-->
+            <div class="carousel-item active">
+            <img class="d-block w-100" style="height:500px;" src="bela-paisagem-de-um-rio-cercado-por-muito-verde-em-uma-floresta.jpg" alt="">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Linda floresta cercada por um rio</h5>
+                <p>Linda paisagem de uma natureza que as vezes não exergamos</p>
+            </div>
+            </div>
+            <!--Atributo carousel-item define cada slides individualmente-->
+            <div class="carousel-item">
+            <img class="d-block w-100" style="height:500px;" src="cachoeira-cascada-de-texolo-em-xico-mexico.jpg" alt="">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Lindissma cachoeira</h5>
+                <p>Cachoeira magnifica no México...</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100" style="height:500px;" src="vista-de-tigre-selvagem-na-natureza.jpg" alt="">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>O Olhar Selvagem</h5>
+                <p>O Tigre, símbolo da força e da beleza dos grandes felinos...</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100" style="height:500px;" src="iguana-de-perto-na-natureza.jpg" alt="">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Todas as cores Juntas</h5>
+                <p>A mistura de cores dos iguanas mostram a perfeição das belezas da natureza...</p>
+            </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carrossel4-Slides" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <!-- Botão Próximo -->
+        <!-- Ícone de seta da direita -->
+        <a class="carousel-control-next" href="#carrossel4-Slides" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+    </center>
+</body>
+</html>
